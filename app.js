@@ -1,3 +1,4 @@
+// Liste des mots
 const mots = [
     "JAVASCRIPT",
     "DART",
@@ -38,6 +39,7 @@ function afficheVie(){
     document.querySelector(".vie").innerHTML = `Vie restant: ${vie} `
 }
 afficheVie()
+// affichage des _ eo am place le cacactere
 for(i=0;i<mot.length;i++){
     tab.push("_")
 }
@@ -49,6 +51,7 @@ function ajout(){
         letter.appendChild(p)
     }
 }
+// Verification du mot 
 function verifier(){
     if(tab.join("")==mot) return true
     return false
@@ -78,6 +81,7 @@ document.querySelector(".btn-restart").addEventListener("click",()=>{
     window.location.reload()
 })
 const touches = document.querySelectorAll(".touche")
+// fonction midesactiver anle caractere
 function stop(){
     touches.forEach(touche=>{
         touche.disabled = true
@@ -122,13 +126,12 @@ touches.forEach(touche =>{
             btnRestart.style.display = "block"
          
         }
+        // midesactiver anle caractere voatsindry
         this.disabled = true
         this.removeEventListener("click",onClick)
 
     })
 })
 ajout()
-function animation(){
-    
-}
+
 console.log(mot)
